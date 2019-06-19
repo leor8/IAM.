@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>I AM</title>
+        <meta name="description" content="">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <link href="https://fonts.googleapis.com/css?family=Rubik:400,500&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="main.css">
+
+        <link href="./node_modules/video.js/dist/video-js.min.css" rel="stylesheet">
+        <link href="./node_modules/videojs-record/dist/css/videojs.record.css" rel="stylesheet">
+
+
+
+        <script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+        <script src="./node_modules/video.js/dist/video.min.js"></script>
+        <script src="./node_modules/recordrtc/RecordRTC.js"></script>
+        <script src="./node_modules/webrtc-adapter/out/adapter.js"></script>
+        <script src="./node_modules/videojs-record/dist/videojs.record.js"></script>
+
+    </head>
+    <body>
+        <h1> I AM. </h1>
+        <h2> Please select a portrait from the options below. Choose five adjectives which describe who you think the person in the video is. After you finish, you will be able to upload your own portrait. </h2>
+
+<!--         <div class="addNewCard" data-toggle="modal" data-target="#exampleModal" >
+          +
+        </div> -->
+
+        <!-- Modal New user -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document" style="background-color: white">
+            <div class="modal-content" style="border-bottom: none">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">I AM.</h5>
+              </div>
+              <div class="modal-body">
+                <form id="myForm">
+
+                <label class="prompt" style="margin: auto; display: block; width: 320px; text-align: center;">Please enter five adjectives which describe who you are. Take five seconds of video to be your portrait. You can do whatever you like for your video</label>
+                    <input type="visi" name="" class="promptAnswer">
+                    <input type="visi" name="" class="promptAnswer">
+                    <input type="visi" name="" class="promptAnswer">
+                    <input type="visi" name="" class="promptAnswer">
+                    <input type="visi" name="" class="promptAnswer">
+                  <video id="myVideo" playsinline class="video-js vjs-default-skin" style="margin: auto; margin-top: 1rem;"></video>
+                </form>
+              </div>
+
+              <div class="modal-footer" style="margin-top: 1rem;">
+                <button class="btn btn-primary newSelfieSummision">Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="image_area">
+
+        <div class="self-col-1 self-col">
+
+
+        </div>
+
+        <div class="self-col-2 self-col">
+        </div>
+
+        <div class="self-col-3 self-col">
+          <div class="selfie"></div>
+        </div>
+
+
+        </div>
+
+
+
+        <!-- Modal Edit user -->
+        <div class="modal fade" id="userModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel" style="margin-left: 12rem;">YOU ARE.</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+
+                <div class="user_right">
+
+                  <div>
+                    <label style="display: block; width: 380px; text-align: center; padding-right: 11rem;">Please add five adjectives which describe who this person is.</label>
+                    <input type="visible" class="visitorAnswer">
+                    <input type="visible" class="visitorAnswer">
+                    <input type="visible" class="visitorAnswer">
+                    <input type="visible" class="visitorAnswer">
+                    <input type="visible" class="visitorAnswer">
+                  </div>
+
+                  <div class="user_bottom">
+
+                  </div>
+
+                </div>
+              </div>
+              <div class="modal-footer" style="margin-top: 0rem">
+                <button type="submit" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary submitPrompt">Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <script type="text/javascript" src="main.js"></script>
+
+    </body>
+</html>
